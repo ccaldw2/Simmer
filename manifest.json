@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+
+	"name": "Simmer",
+	"description": "Cool off those crazy commenters with this chrome extension.",
+	"version": "0.1",
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "controls.html"
+	},
+
+	"permissions": ["activeTab", "storage"]
+}
