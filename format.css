@@ -8,17 +8,68 @@ body {
 h1,h2,h3 {
 	font-size: 14px;
 	font-weight: bolder;
-	padding: 3px;
+	padding: 3px 0px 0px 0px;
+	background: #FFF;
+	color: #999;
+
+}
+
+p{
 	background: #AFE;
 	color: #5CB;
 }
 
-p{
-}
-
 .selection{
-	align-items: right;
+	display: block;
+	position: relative;
+	padding: 0px 0px 5px 20px;
+	float: left;
 	display: flex;
 	justify-content: space-between;
 
+}
+
+.selection input{
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.checkmark{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 16px;
+	width: 16px;
+	background-color: #ddd;
+}
+
+.selection:hover input ~ .checkmark {
+	background-color: #eee;
+}
+
+.selection input:checked ~ .checkmark{
+	background-color: #AFE;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.selection input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.selection .checkmark:after {
+  left: 5px;
+  top: 3px;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
