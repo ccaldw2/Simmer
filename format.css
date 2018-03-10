@@ -1,3 +1,22 @@
 body {
 	background:#AFE;
+	font-family: arial;
+	margin: 5px, 0px;
+	white-space: nowrap;
+}
+
+h1,h2,h3 {
+	font-size: 14px;
+	font-weight: bolder;
+}
+
+p{
+	margin: 1px;
+}
+
+.selection{
+	align-items: right;
+	display: flex;
+	justify-content: space-between;
+
 }
