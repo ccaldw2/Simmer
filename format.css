@@ -1,17 +1,19 @@
 body {
-	background:#AFE;
+	background:#FFF;
 	font-family: arial;
-	margin: 5px, 0px;
+	margin: 0px, 0px;
 	white-space: nowrap;
 }
 
 h1,h2,h3 {
 	font-size: 14px;
 	font-weight: bolder;
+	padding: 3px;
+	background: #AFE;
+	color: #5CB;
 }
 
 p{
-	margin: 1px;
 }
 
 .selection{
