@@ -3,7 +3,7 @@
 
 	"name": "Simmer",
 	"description": "Cool off those crazy commenters with this chrome extension.",
-	"version": "0.1.1",
+	"version": "0.1.2",
 
 	"browser_action": {
 		"default_icon": "icon.png",
