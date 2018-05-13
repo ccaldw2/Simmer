@@ -48,7 +48,7 @@ function replaceNodeText(node) {
 }
 
 function generateReplacement(text) {
-    var regex = /literally/gi;
+    var regex = /\bliterally\b/gi;
     return text.replace(regex, " ");
     console.log("made it to replacement function");
 }
