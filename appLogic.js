@@ -37,15 +37,12 @@ function sweepWebsite(){
 
 function manageText() {
 
-
-	var script1 = 'document.body.style.backgroundColor = "red" ;';
-	var script2 = 'document.body.style.backgroundColor = "blue" ;';
-	var script3 = 'document.body.style.backgroundColor = "green" ;';
+	var scripts = ['clapScript.js', 'capsLockScript.js', 'literallyScript.js'];
 
     chrome.storage.sync.get({"clap" : ""}, function(items) {
     	if (items.clap){
 	    	chrome.tabs.executeScript({
-	    		code: script1
+	    		file: scripts[0]
   			});
     	};
     });
@@ -53,7 +50,7 @@ function manageText() {
     chrome.storage.sync.get({"capsLock" : ""}, function(items) {
     	if(items.capsLock){
 	    	chrome.tabs.executeScript({
-	    		code: script2
+	    		file: scripts[1]
   			});
     	};
     });
@@ -61,8 +58,9 @@ function manageText() {
     chrome.storage.sync.get({"literally" : ""}, function(items) {
     	if(items.literally){
 	    	chrome.tabs.executeScript({
-	    		code: script3
+	    		file: scripts[2]
   			});
     	};
     });
 }
+
