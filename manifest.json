@@ -2,8 +2,8 @@
 	"manifest_version": 2,
 
 	"name": "Simmer",
-	"description": "Cool off those crazy commenters with this chrome extension.",
-	"version": "0.1.2",
+	"description": "Makes the internet a bit less annoying, I guess.",
+	"version": "0.1.5",
 
 	"browser_action": {
 		"default_icon": "icon.png",
