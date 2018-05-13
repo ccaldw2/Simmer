@@ -24,18 +24,14 @@ function sweepWebsite(){
 
   	var tab; 
   	chrome.tabs.query (queryInfo, function(tabs){
-  		console.log("query for tab initiated");
 		tab = tabs[0];
   	});
 
-  	manageText ();
-  	
-	//chrome.tabs.reload(tab);
-	//console.log("Tab reloaded");
+  	injectScript ();
 	
 }
 
-function manageText() {
+function injectScript() {
 
 	var scripts = ['clapScript.js', 'capsLockScript.js', 'literallyScript.js'];
 
