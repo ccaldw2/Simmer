@@ -1,6 +1,3 @@
-
-
-console.log("Breaking into the new main")
 document.title = generateReplacement(document.title);
 
 // Replace all initial text on page
@@ -50,5 +47,4 @@ function replaceNodeText(node) {
 function generateReplacement(text) {
     var regex = /\bliterally\b/gi;
     return text.replace(regex, " ");
-    console.log("made it to replacement function");
 }
