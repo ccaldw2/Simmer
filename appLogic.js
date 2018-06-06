@@ -33,15 +33,7 @@ function sweepWebsite(){
 
 function injectScript() {
 
-	var scripts = ['clapScript.js', 'capsLockScript.js', 'literallyScript.js'];
-
-    chrome.storage.sync.get({"clap" : ""}, function(items) {
-    	if (items.clap){
-	    	chrome.tabs.executeScript({
-	    		file: scripts[0]
-  			});
-    	};
-    });
+	var scripts = ['capsLockScript.js', 'literallyScript.js'];
 
     chrome.storage.sync.get({"capsLock" : ""}, function(items) {
     	if(items.capsLock){
