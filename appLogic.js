@@ -38,7 +38,7 @@ function injectScript() {
     chrome.storage.sync.get({"capsLock" : ""}, function(items) {
     	if(items.capsLock){
 	    	chrome.tabs.executeScript({
-	    		file: scripts[1]
+	    		file: scripts[0]
   			});
     	};
     });
@@ -46,7 +46,7 @@ function injectScript() {
     chrome.storage.sync.get({"literally" : ""}, function(items) {
     	if(items.literally){
 	    	chrome.tabs.executeScript({
-	    		file: scripts[2]
+	    		file: scripts[1]
   			});
     	};
     });

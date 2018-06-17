@@ -8,10 +8,6 @@
 	retrieves data stored via chrome.storage for each parameter of the application
 */
 function retrieveSettings() {
-    chrome.storage.sync.get({"clap" : ""}, function(items) {
-    	console.log('retrieved clap as ' + items.clap);
-    	document.getElementById("clap").checked = items.clap;
-    });
 
     chrome.storage.sync.get({"capsLock" : ""}, function(items) {
     	console.log('retrieved capsLock as ' + items.capsLock);
@@ -29,13 +25,8 @@ function retrieveSettings() {
 	so that the application maintains continuity when the window is closed
 */
 function changeSettings() {
-	var clap = document.getElementById("clap").checked;
 	var capsLock = document.getElementById("capsLock").checked;
 	var literally = document.getElementById("literally").checked;
-
-	chrome.storage.sync.set({"clap" : clap}, function() {
-		console.log('set clap to ' + clap);
-	});
 
 	chrome.storage.sync.set({"capsLock" : capsLock}, function() {
 		console.log('set capsLock to ' + capsLock);
