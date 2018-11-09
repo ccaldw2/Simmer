@@ -51,9 +51,9 @@ function delegateEdits(text, conditions) {
 
 
 function removeLiterallys(text) {
-    var regex = /\bliterally\b/gi;
+    var regex = /\bliterally\b /gi;
 
-    return text.replace(regex, " ");
+    return text.replace(regex, "");
 }
 
 function deCapitalise(text) {
