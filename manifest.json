@@ -3,7 +3,7 @@
 
 	"name": "Simmer",
 	"description": "Makes the internet a bit less annoying, I guess.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 
 	"browser_action": {
 		"default_icon": "icon.png",
