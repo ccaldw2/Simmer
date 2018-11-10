@@ -10,5 +10,10 @@
 		"default_popup": "popup.html"
 	},
 
-	"permissions": ["activeTab", "storage"]
+	"permissions": [
+		"activeTab", 
+		"storage",
+		"webRequest,"
+		"<all_urls>"
+	]
 }

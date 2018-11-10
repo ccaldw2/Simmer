@@ -1,13 +1,21 @@
-(function () {
-    chrome.storage.onChanged.addListener( function() {
-            
-        chrome.storage.sync.get(["literally","capsLock"], function(items) {
-            replaceTitleText(items)
-            replaceNodeText(document.body, items);
-        })
+String.prototype.replaceAt = function(index, replacement) {
+    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+}
 
-    })
+(function () { 
+    chrome.storage.onChanged.addListener(alterText)
+    chrome.webRequest.onCompleted.addListener(alterText)
+    alterText()
 })()
+
+
+
+function alterText() {
+    chrome.storage.sync.get(["literally","capsLock"], function(items) {
+        replaceTitleText(items)
+        replaceNodeText(document.body, items);
+    })
+}
 
 
 
@@ -51,7 +59,7 @@ function delegateEdits(text, conditions) {
 
 
 function removeLiterallys(text) {
-    var regex = /\bliterally\b /gi;
+    var regex = / *\bliterally\b/gi;
 
     return text.replace(regex, "");
 }
@@ -65,10 +73,7 @@ function deCapitalise(text) {
         text = text.replaceAt(loc,replacement);
     }
     return text;
-}
+} //TO-DO: create a more sophisticated decapitalisation function
 
 
 
-String.prototype.replaceAt = function(index, replacement) {
-    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
-}

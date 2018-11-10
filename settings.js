@@ -1,29 +1,11 @@
-/*
-	This file contains all the scripts required to manage the memory of the simmer
-	extension, with regards to the application settings.
-*/
-
-
-/*
-	retrieves data stored via chrome.storage for each parameter of the application
-*/
 function retrieveSettings() {
 
-    chrome.storage.sync.get({"capsLock" : ""}, function(items) {
-    	console.log('retrieved capsLock as ' + items.capsLock);
+    chrome.storage.sync.get(["literally", "capsLock"], function(items) {
     	document.getElementById("capsLock").checked = items.capsLock;
-    });
-
-    chrome.storage.sync.get({"literally" : ""}, function(items) {
-    	console.log('retrieved literally as ' + items.literally);
     	document.getElementById("literally").checked = items.literally;
     });
 }
 
-/*
-	uses chrome.storage API to save settings for each parameter of the application
-	so that the application maintains continuity when the window is closed
-*/
 function changeSettings() {
 	var capsLock = document.getElementById("capsLock").checked;
 	var literally = document.getElementById("literally").checked;
