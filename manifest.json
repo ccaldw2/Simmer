@@ -5,15 +5,31 @@
 	"description": "Makes the internet a bit less annoying, I guess.",
 	"version": "1.0.2",
 
+
+
 	"browser_action": {
 		"default_icon": "icon.png",
 		"default_popup": "popup.html"
 	},
 
+
+
 	"permissions": [
 		"activeTab", 
 		"storage",
-		"webRequest,"
-		"<all_urls>"
-	]
-}
+		"webRequest"
+	],
+
+
+	"content_scripts": [
+   {
+     "matches": [
+     	"<all_urls>"
+     ],
+     "js": [
+     	"DOMAlterScript.js"
+     ]
+   }
+ ]
+
+}	                                                                                  

@@ -1,13 +1,13 @@
-String.prototype.replaceAt = function(index, replacement) {
-    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
-}
-
-(function () { 
+//(function () { 
     chrome.storage.onChanged.addListener(alterText)
     chrome.webRequest.onCompleted.addListener(alterText)
     alterText()
-})()
+//})()
 
+
+String.prototype.replaceAt = function(index, replacement) {
+    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+}
 
 
 function alterText() {
@@ -74,6 +74,3 @@ function deCapitalise(text) {
     }
     return text;
 } //TO-DO: create a more sophisticated decapitalisation function
-
-
-
