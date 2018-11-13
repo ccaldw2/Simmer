@@ -1,8 +1,8 @@
-//(function () { 
+(function () { 
+    document.addEventListener("DOMContentLoaded", alterText)
     chrome.storage.onChanged.addListener(alterText)
-    chrome.webRequest.onCompleted.addListener(alterText)
-    alterText()
-//})()
+    //chrome.webRequest.onCompleted.addListener(alterText)
+})()
 
 
 String.prototype.replaceAt = function(index, replacement) {
